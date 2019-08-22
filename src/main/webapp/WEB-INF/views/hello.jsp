@@ -1,16 +1,13 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 14283
-  Date: 2019/8/21
-  Time: 16:53
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page  contentType="text/html;charset=UTF-8" language="java" pageEncoding="utf-8" %>
+<%@page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8" %>
+<!DOCTYPE HTML>
 <html>
 <head>
-    <title>Title</title>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-hello 试图解析器找对用的js名称
+
+hello, ay
+
 </body>
 </html>
