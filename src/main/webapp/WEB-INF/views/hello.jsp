@@ -7,7 +7,7 @@
 </head>
 <body>
 
-hello, ay
+这是一个jsp页面
 
 </body>
 </html>
