@@ -3,8 +3,27 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ay.dao.AyUserDao">
 
+    <insert id="insertAyUser" parameterType="com.ay.model.AyUser">
+    insert into ay_user(id,name,password)value (#{id},#{name},#{password})
+    </insert>
+
+    <update id="updateAyUser" parameterType="com.ay.model.AyUser">
+    update ay_user set name=#{name},password=#{password}
+    where id=#{id}
+    </update>
+
+    <delete id="deleteAyUser" parameterType="int">
+    delete from ay_user
+    where id=#{id}
+    </delete>
+
     <select id="findAll" resultType="com.ay.model.AyUser">
         select * from ay_user
+    </select>
+
+    <select id="findAllById" resultType="com.ay.model.AyUser" parameterType="int">
+    select * from ay_user
+    where id=#{id}
     </select>
 
 </mapper>
