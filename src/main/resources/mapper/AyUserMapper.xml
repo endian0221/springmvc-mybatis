@@ -3,27 +3,103 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ay.dao.AyUserDao">
 
-    <insert id="insertAyUser" parameterType="com.ay.model.AyUser">
-    insert into ay_user(id,name,password)value (#{id},#{name},#{password})
+    <resultMap id="userMap" type="com.ay.model.AyUser">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="password" column="password"/>
+    </resultMap>
+
+    <sql id="userField">
+        a.id as "id",
+        a.name as "name",
+        a.password as "password"
+    </sql>
+
+    <!--插入，keyProperty设置为主键，useGeneratedKeys自增-->
+    <insert id="insert" parameterType="com.ay.model.AyUser">
+    insert into ay_user(id,name,password) value (#{id},#{name},#{password})
     </insert>
 
-    <update id="updateAyUser" parameterType="com.ay.model.AyUser">
-    update ay_user set name=#{name},password=#{password}
+    <!--修改-->
+    <update id="update" parameterType="com.ay.model.AyUser">
+    update ay_user set id=#{id},name=#{name},password=#{password}
     where id=#{id}
     </update>
 
-    <delete id="deleteAyUser" parameterType="int">
+    <!--删除-->
+    <delete id="delete" parameterType="int">
     delete from ay_user
     where id=#{id}
     </delete>
 
-    <select id="findAll" resultType="com.ay.model.AyUser">
-        select * from ay_user
+    <!---查询-->
+    <select id="findAll" resultMap="userMap">
+        select
+       <include refid="userField"/>
+        from ay_user a
     </select>
 
-    <select id="findAllById" resultType="com.ay.model.AyUser" parameterType="int">
+    <select id="findById" resultType="com.ay.model.AyUser" parameterType="int">
     select * from ay_user
     where id=#{id}
+    </select>
+
+    <select id="findByName" resultType="com.ay.model.AyUser" parameterType="string">
+    select * from ay_user
+    where name = #{name}
+    </select>
+
+    <select id="findNameAndPassword" resultMap="userMap">
+        select * from ay_user
+        where 1=1
+        <if test="name !=null and name !=''">
+            and name=#{name}
+        </if>
+        <if test="password !=null and password !=''">
+            and password=#{password}
+        </if>
+    </select>
+
+    <select id="findNameOrPassword" resultType="com.ay.model.AyUser" parameterType="string">
+        select * from ay_user
+        <where>
+            <if test="name != null and name !=''">
+                and name=#{name}
+            </if>
+        </where>
+    </select>
+
+    <update id="updata2" parameterType="com.ay.model.AyUser">
+        update ay_user
+        <set>
+            <if test=" name != null and name !=''">
+              name = #{name},
+            </if>
+            <if test="password != null and password !=''">
+            password = #{password},
+            </if>
+        </set>
+        where id= #{id}
+    </update>
+
+
+    <select id="bind" parameterType="string" resultType="com.ay.model.AyUser">
+        <bind name="name_pattern" value="'%'+name+'%'"/>
+        <bind name="password_pattern" value="'%'+password+'%'"/>
+
+        select * from ay_user
+        <where>
+            <if test="name_pattern != null and name_pattern !=''">
+              and  name like #{name_pattern}
+            </if>
+
+            <if test="password_pattern != null and password_pattern !=''">
+              and  password like #{password_pattern}
+            </if>
+
+        </where>
+
+
     </select>
 
 </mapper>

@@ -7,7 +7,7 @@
 </head>
 <body>
 
-这是一个jsp页面
+启动成功！
 
 </body>
 </html>

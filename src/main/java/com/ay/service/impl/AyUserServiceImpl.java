@@ -16,21 +16,48 @@ public class AyUserServiceImpl implements AyUserService {
     public List<AyUser> findAll() {
         return ayUserDao.findAll();
     }
+
     @Override
-    public AyUser findAllById(int id) {
-        return ayUserDao.findAllById(id);
+    public AyUser findByName(String name) {
+        return ayUserDao.findByName(name);
+    }
+
+    @Override
+    public AyUser findById(int id) {
+        return ayUserDao.findById(id);
     }
     @Override
-    public int updateAyUser(AyUser ayUser) {
-        return ayUserDao.updateAyUser(ayUser);
+    public int update(AyUser ayUser) {
+        return ayUserDao.update(ayUser);
     }
     @Override
-    public int deleteAyUser(int id) {
-        return ayUserDao.deleteAyUser(id);
+    public int delete(int id) {
+        return ayUserDao.delete(id);
     }
+
     @Override
-    public int insertAyUser(AyUser ayUser) {
-        return ayUserDao.insertAyUser(ayUser);
+    public List<AyUser> findNameAndPassword(String name, String password) {
+        return ayUserDao.findNameAndPassword(name,password);
+    }
+
+    @Override
+    public List<AyUser> findNameOrPassword(String name) {
+        return ayUserDao.findNameOrPassword(name);
+    }
+
+    @Override
+    public int insert(AyUser ayUser) {
+        return ayUserDao.insert(ayUser);
+    }
+
+    @Override
+    public int updata2(AyUser ayUser) {
+        return ayUserDao.updata2(ayUser);
+    }
+
+    @Override
+    public List<AyUser> bind(String name, String password) {
+        return ayUserDao.bind(name,password);
     }
 }
 
