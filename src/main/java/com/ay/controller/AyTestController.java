@@ -4,8 +4,10 @@ import com.ay.model.AyUser;
 import com.ay.service.AyUserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -132,7 +134,15 @@ public class AyTestController {
             System.out.println(ayUser.getName());
             System.out.println(ayUser.getPassword());
         }
+    }
 
+    @RequestMapping("/json")
+    @ResponseBody
+    public Object jsonTest(){
+        AyUser ayUser=new AyUser();
+        ayUser.setName("名人");
+        ayUser.setPassword("123123");
+        return ayUser;
     }
 
 }
