@@ -6,11 +6,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5af75ada-22fe-4bbf-bbb9-047e05665a8e" name="Default Changelist" comment="增加了几句增删改查语句">
+    <list default="true" id="5af75ada-22fe-4bbf-bbb9-047e05665a8e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ay/controller/AyTestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ay/controller/AyTestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/hello.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/hello.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +38,7 @@
         <option value="Interface" />
         <option value="spring-beans.schema" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -83,6 +84,7 @@
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -253,7 +255,8 @@
       <workItem from="1567394322809" duration="31000" />
       <workItem from="1567479817595" duration="566000" />
       <workItem from="1568796711968" duration="1361000" />
-      <workItem from="1568874156152" duration="2284000" />
+      <workItem from="1568874156152" duration="2405000" />
+      <workItem from="1568876879986" duration="3746000" />
     </task>
     <task id="LOCAL-00001" summary="整合ssm第二次，还是有错，有空继续整合">
       <created>1566540291450</created>
@@ -304,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567147829054</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="添加json依赖，修改接口返回json数据">
+      <created>1568876515302</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1568876515302</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,6 +339,7 @@
     <MESSAGE value="整合ssm完毕，junit完毕，log4j完毕，发现缺点：请求一次，但是后台执行了2次有空在解决" />
     <MESSAGE value="增加了几句增删改查语句" />
     <MESSAGE value="增加json依赖" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加json依赖" />
+    <MESSAGE value="添加json依赖，修改接口返回json数据" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加json依赖，修改接口返回json数据" />
   </component>
 </project>

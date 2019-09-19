@@ -24,7 +24,7 @@ public class AyTestController {
      * @param model
      * @return
      */
-    @ResponseBody
+//    @ResponseBody
     @RequestMapping(value = "/findAll",method = RequestMethod.GET)
     public Object findAll(Model model){
         List<AyUser> ayUserList = ayUserService.findAll();
@@ -32,7 +32,8 @@ public class AyTestController {
             System.out.println("id: " + ayUser.getId());
             System.out.println("name: " + ayUser.getName());
         }
-        return ayUserList;
+//        return ayUserList;
+        return "hello";
     }
     /***
      * 根据id查询
