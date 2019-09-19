@@ -4,7 +4,6 @@ import com.ay.model.AyUser;
 import com.ay.service.AyUserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -25,14 +24,15 @@ public class AyTestController {
      * @param model
      * @return
      */
+    @ResponseBody
     @RequestMapping(value = "/findAll",method = RequestMethod.GET)
-    public String findAll(Model model){
+    public Object findAll(Model model){
         List<AyUser> ayUserList = ayUserService.findAll();
         for(AyUser ayUser : ayUserList){
             System.out.println("id: " + ayUser.getId());
             System.out.println("name: " + ayUser.getName());
         }
-        return "hello";
+        return ayUserList;
     }
     /***
      * 根据id查询
@@ -136,13 +136,13 @@ public class AyTestController {
         }
     }
 
-    @RequestMapping("/json")
-    @ResponseBody
-    public Object jsonTest(){
-        AyUser ayUser=new AyUser();
-        ayUser.setName("名人");
-        ayUser.setPassword("123123");
-        return ayUser;
-    }
+//    @RequestMapping("/json")
+//    @ResponseBody
+//    public Object jsonTest(){
+//        AyUser ayUser=new AyUser();
+//        ayUser.setName("名人");
+//        ayUser.setPassword("123123");
+//        return ayUser;
+//    }
 
 }

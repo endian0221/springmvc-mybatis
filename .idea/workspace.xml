@@ -6,13 +6,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5af75ada-22fe-4bbf-bbb9-047e05665a8e" name="Default Changelist" comment="整合ssm完毕，junit完毕，log4j完毕，发现缺点：请求一次，但是后台执行了2次有空在解决">
+    <list default="true" id="5af75ada-22fe-4bbf-bbb9-047e05665a8e" name="Default Changelist" comment="增加了几句增删改查语句">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ay/controller/AyTestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ay/controller/AyTestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ay/dao/AyUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ay/dao/AyUserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ay/service/AyUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ay/service/AyUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ay/service/impl/AyUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ay/service/impl/AyUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/AyUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/AyUserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +94,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3632184" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -137,6 +135,7 @@
       </method>
     </configuration>
     <configuration name="Tomcat 8.5.43" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.43" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8090/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="ssm-project:war exploded">
@@ -147,6 +146,7 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_ssm-project_8" />
+        <option name="HTTP_PORT" value="8090" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -244,7 +244,16 @@
       <workItem from="1566624714520" duration="579000" />
       <workItem from="1566625542255" duration="10000" />
       <workItem from="1566633423236" duration="6228000" />
-      <workItem from="1566887087379" duration="2852000" />
+      <workItem from="1566887087379" duration="3698000" />
+      <workItem from="1566965188372" duration="1103000" />
+      <workItem from="1567146593414" duration="543000" />
+      <workItem from="1567147455788" duration="412000" />
+      <workItem from="1567148767101" duration="376000" />
+      <workItem from="1567391596471" duration="12000" />
+      <workItem from="1567394322809" duration="31000" />
+      <workItem from="1567479817595" duration="566000" />
+      <workItem from="1568796711968" duration="1361000" />
+      <workItem from="1568874156152" duration="2284000" />
     </task>
     <task id="LOCAL-00001" summary="整合ssm第二次，还是有错，有空继续整合">
       <created>1566540291450</created>
@@ -281,7 +290,21 @@
       <option name="project" value="LOCAL" />
       <updated>1566639647704</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="增加了几句增删改查语句">
+      <created>1566890026644</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1566890026644</updated>
+    </task>
+    <task id="LOCAL-00007" summary="增加json依赖">
+      <created>1567147829054</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1567147829054</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,6 +327,8 @@
     <MESSAGE value="整合ssm第二次，还是有错，有空继续整合" />
     <MESSAGE value="整合ssm第三次，还是有错，有空继续整合" />
     <MESSAGE value="整合ssm完毕，junit完毕，log4j完毕，发现缺点：请求一次，但是后台执行了2次有空在解决" />
-    <option name="LAST_COMMIT_MESSAGE" value="整合ssm完毕，junit完毕，log4j完毕，发现缺点：请求一次，但是后台执行了2次有空在解决" />
+    <MESSAGE value="增加了几句增删改查语句" />
+    <MESSAGE value="增加json依赖" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加json依赖" />
   </component>
 </project>
