@@ -6,12 +6,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import java.util.List;
 
 @Controller
+@RequestMapping("/user")
 public class AyTestController {
 
 
@@ -25,7 +25,7 @@ public class AyTestController {
      * @return
      */
 //    @ResponseBody
-    @RequestMapping(value = "/findAll",method = RequestMethod.GET)
+    @RequestMapping(value = "/findAll.action",method = RequestMethod.GET)
     public Object findAll(Model model){
         List<AyUser> ayUserList = ayUserService.findAll();
         for(AyUser ayUser : ayUserList){

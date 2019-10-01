@@ -9,12 +9,5 @@
 
 启动成功！
 
-<%
-    // 重定向到新地址
-    String site = new String("https://www.baidu.com/");
-    response.setStatus(response.SC_MOVED_TEMPORARILY);
-    response.setHeader("Location", site);
-%>
-
 </body>
 </html>
